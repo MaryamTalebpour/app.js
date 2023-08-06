@@ -1,13 +1,9 @@
-let firstName = 'Maryam'
-let lastName = 'Talebpour'
+let age = 25
 
-//let fullName = firstName + ' ' + lastName
+if (age > 20) {
+    console.log('is young')
+}
 
-//console.log(fullName)
-
-let num1 = 12.4
-let num2 = -4
-let num3 = 20
-let sum = num1 + num2 / num3
-
-console.log(sum)
+if (age < 20) {
+    console.log('is child')
+}

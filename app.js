@@ -1,9 +1,26 @@
-
-let getUserInfo = function(name, id) {
-  let res = `name: ${name} - id: ${id}` 
-  return res
+let userInfo = {
+  userId : 10,
+  userName : 'Maryam Talebpour',
+  role : 'Admin'
 }
 
-let showResult = getUserInfo('Maryam' , 30)
+console.log(`user role is: ${userInfo.role}`)
 
-console.log(showResult)
+
+let userInfoOne = {
+  userId : 20,
+  userName : 'Maryam Talebpour',
+  role : 'admin'
+}
+
+let userInfoTwo = {
+  userId : 10,
+  userName : 'Hamed Talebpour',
+  role : 'User'
+}
+
+let fechUserData = function(user) {
+  console.log(`Username is: ${user.userName}`)
+}
+
+fechUserData(userInfoOne)

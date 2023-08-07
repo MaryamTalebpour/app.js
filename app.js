@@ -16,4 +16,4 @@ if (isUser) {
     console.log('welcome admin')
 } else {
     console.log('welcome')
-}
+} 

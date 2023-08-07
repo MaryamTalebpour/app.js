@@ -1,20 +1,9 @@
-let message = function() {
-  console.log('Welcome')
-}
-
-message()
-
-let Id = function(id) {
-  console.log(id)
-}
-
-Id(6)
-
-let userId = function(id) {
-  let res = 'user id is :' + id
+let sum = function(num1, num2, num3) {
+  let res = num1 + num2 + num3
   return res
 }
 
-let showResult = userId(10)
+let showResult = sum(10, 4, 6)
+
 
 console.log(showResult)

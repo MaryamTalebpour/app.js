@@ -1,6 +1,6 @@
 
-let getUserInfo = function(name = 'test', id = 10) {
-  let res = 'name:' + name + ' ' + 'id:' +id 
+let getUserInfo = function(name, id) {
+  let res = `name: ${name} - id: ${id}` 
   return res
 }
 

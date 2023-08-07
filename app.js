@@ -1,9 +1,19 @@
-let age = 25
+let validEmail = true
+let validPassword = false
 
-if (age > 20) {
-    console.log('is young')
+if (validEmail && validPassword) {
+    console.log('logged in')
+} else if (validEmail || validPassword) {
+    console.log('is correct')
 }
 
-if (age < 20) {
-    console.log('is child')
+let isUser = false
+let roleUser = 'Admin'
+
+if (isUser) {
+    console.log('welcome User')
+} else if (roleUser === 'Admin') {
+    console.log('welcome admin')
+} else {
+    console.log('welcome')
 }

@@ -1,26 +1,24 @@
-let userInfo = {
-  userId : 10,
-  userName : 'Maryam Talebpour',
-  role : 'Admin'
+let userAccount = {
+  fullName :'Maryam Talebpour',
+  income : 0,
+  outgo :0,
 }
 
-console.log(`user role is: ${userInfo.role}`)
-
-
-let userInfoOne = {
-  userId : 20,
-  userName : 'Maryam Talebpour',
-  role : 'admin'
+let addIncome = function(account, income) {
+  account.income = account.income + income
 }
 
-let userInfoTwo = {
-  userId : 10,
-  userName : 'Hamed Talebpour',
-  role : 'User'
+let addOutgo = function(account, amount) {
+   account.outgo = account.outgo + amount
 }
 
-let fechUserData = function(user) {
-  console.log(`Username is: ${user.userName}`)
+let getAccountData = function(account) {
+  let balance = account.income - account.outgo
+  return `account name: ${userAccount.fullName} - balance: ${balance} `
 }
 
-fechUserData(userInfoOne)
+addIncome(userAccount, 2000)
+addOutgo(userAccount, 300)
+addOutgo(userAccount, 1400)
+
+console.log(getAccountData(userAccount))

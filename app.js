@@ -1,19 +1,10 @@
-let validEmail = true
-let validPassword = false
+let firstName = 'Maryam'
 
-if (validEmail && validPassword) {
-    console.log('logged in')
-} else if (validEmail || validPassword) {
-    console.log('is correct')
+if (true) {
+    let lastName = 'Talebpour'
+    console.log(lastName)
+    console.log(firstName)
 }
 
-let isUser = false
-let roleUser = 'Admin'
-
-if (isUser) {
-    console.log('welcome User')
-} else if (roleUser === 'Admin') {
-    console.log('welcome admin')
-} else {
-    console.log('welcome')
-} 
+console.log(firstName)
+//console.log(lastName) wrong!

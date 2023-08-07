@@ -1,22 +1,20 @@
-let firstName = 'Maryam'
- if (true) {
-    let lastName = 'Talebpour'
-    console.log(lastName)
-    if (true) {
-        let age = 30
-        console.log(age)
-    }
- }
+let message = function() {
+  console.log('Welcome')
+}
 
- console.log(firstName)
+message()
 
- let name = 'test1'
-  if (true) {
-    let name = 'test2'
-    if (true) {
-        let name = 'test3'
-        console.log(name)
-    }
-  }
+let Id = function(id) {
+  console.log(id)
+}
 
-  console.log(name)
+Id(6)
+
+let userId = function(id) {
+  let res = 'user id is :' + id
+  return res
+}
+
+let showResult = userId(10)
+
+console.log(showResult)

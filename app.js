@@ -1,9 +1,9 @@
-let sum = function(num1, num2, num3) {
-  let res = num1 + num2 + num3
+
+let getUserInfo = function(name = 'test', id = 10) {
+  let res = 'name:' + name + ' ' + 'id:' +id 
   return res
 }
 
-let showResult = sum(10, 4, 6)
-
+let showResult = getUserInfo('Maryam' , 30)
 
 console.log(showResult)

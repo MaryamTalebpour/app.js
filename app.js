@@ -1,12 +1,14 @@
-let course = {
-  name : 'advanced js',
-  studentLimit : 30,
-  studentCount : 0,
-  checkAvailability : function(courseSize) {
-    let leftCount = this.studentLimit - this.studentCount
-    return courseSize <= leftCount
-  }
-}
+let fullName = 'MaryamTalebpour'
 
-let status = course.checkAvailability(30)
-console.log(status)
+console.log(fullName.length)
+console.log(fullName.toUpperCase())
+
+let password = 'Maryam12345'
+
+console.log(password.includes('123459'))
+
+let email = ' maryam@gmail.com'
+
+console.log(email)
+
+console.log(email.trim())

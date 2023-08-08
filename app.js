@@ -1,24 +1,15 @@
-let userAccount = {
-  fullName :'Maryam Talebpour',
-  income : 0,
-  outgo :0,
+let course = {
+  name : 'advanced js',
+  studentLimit : 30,
+  studentCount :0,
+  checkAvailability : function(courseSize)  {
+    console.log(this.name)
+    return true
+  }
 }
 
-let addIncome = function(account, income) {
-  account.income = account.income + income
-}
+//course.checkAvailability(30)
 
-let addOutgo = function(account, amount) {
-   account.outgo = account.outgo + amount
-}
+let status = course.checkAvailability(30)
 
-let getAccountData = function(account) {
-  let balance = account.income - account.outgo
-  return `account name: ${userAccount.fullName} - balance: ${balance} `
-}
-
-addIncome(userAccount, 2000)
-addOutgo(userAccount, 300)
-addOutgo(userAccount, 1400)
-
-console.log(getAccountData(userAccount))
+console.log(status)

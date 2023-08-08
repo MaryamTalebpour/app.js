@@ -1,8 +1,7 @@
 const cartItems = ['book1', 'book2', 'book3' , 'book4']
 
-cartItems.push('book5')
-cartItems.pop()
+cartItems.splice(0, 2, 'newitem')
 
-cartItems.unshift('first item')
-cartItems.shift()
+cartItems[5] = 'book5'
+
 console.log(cartItems)

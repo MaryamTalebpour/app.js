@@ -1,4 +1,4 @@
-const cartItems =[ {
+const productItems =[ {
     title :'book1',
      price : 20
 } , {
@@ -12,12 +12,16 @@ const cartItems =[ {
     price :50
 }]
 
-const findProduct = function(cart, productTitle) {
-    return cart.find(function(item,index){
-        return item.title.toLowerCase() === productTitle.toLowerCase()
+const deleteProduct = function(products, productItem) {
+    const indexValue = products.findIndex(function(item, index){
+        return item.title.toLowerCase() === productItem.toLowerCase()
     })
-}
-
-const result = findProduct(cartItems, 'book3')
-
-console.log(result)
+    if (indexValue >-1) {
+        productItems.splice(indexValue, 1)
+    } else {
+        console.log('product not found')
+    }
+    }
+    
+    deleteProduct(productItems, 'book2')
+    console.log(productItems)

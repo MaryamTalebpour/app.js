@@ -12,8 +12,13 @@ const cartItems =[ {
     price :50
 }]
 
-const indexValue = cartItems.findIndex( function(item, index){
-    return item.title === 'book3'
-})
+const findProduct = function(cart, productTitle) {
+    const indexValue = cart.findIndex(function(item,index){
+        return item.title.toLowerCase() === productTitle.toLowerCase()
+    })
+    return cart[indexValue]
+}
 
-console.log(indexValue)
+const result = findProduct(cartItems, 'book3')
+
+console.log(result)

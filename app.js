@@ -1,10 +1,19 @@
-const cartItems = ['book1', 'book2', 'book3', 'book4']
+for (let count = 0; count <=5; count = count +1) {
+    console.log(count)
+}
 
-cartItems.shift()
-cartItems.splice(1,1)
-cartItems.push('book5')
+//count++  count= count+1
 
-cartItems.forEach(function(item, index){
-    const num = index +1
-    console.log(`${num} - product name : ${item}`)
-})
+const cartItem = ['book1', 'book2' , 'book3', 'book4']
+
+for (let count =0 ; count < cartItem.length ; count++) {
+    console.log(cartItem[count])
+}
+
+const cartItems = ['book1', 'book2' , 'book3' , 'book4']
+
+for (let count = 0; count < cartItems.length; count++){
+    const num = count +1
+    const productName = cartItems[count]
+    console.log(`${num} - product Name : ${productName}`)
+}

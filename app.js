@@ -1,12 +1,3 @@
-const numbers = [ 9, 10, 4, 22, 15]
-
-const filteredNumber = numbers.filter(function(item){
-    return item >= 10
-})
-
-console.log(filteredNumber)
-
-
 const productItems =[ {
     title :'book1',
      exist : true
@@ -21,13 +12,17 @@ const productItems =[ {
     exist : false
 }]
 
-const productNotExist = function(product){
-    return product.filter(function(item){
-        //return item.exist === false
-        return !item.exist  
+const sortProduct = function(products) {
+    products.sort(function(a , b) {
+        if(a.exist === true && b.exist === false){
+            return -1
+        } else if(b.exist === true && a.exist ===false){
+            return 1
+        }else {
+            return 0
+        }
     })
 }
 
-let result = productNotExist(productItems)
-
-console.log(result)
+sortProduct(productItems)
+console.log(productItems)

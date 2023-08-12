@@ -1,27 +1,33 @@
+const numbers = [ 9, 10, 4, 22, 15]
+
+const filteredNumber = numbers.filter(function(item){
+    return item >= 10
+})
+
+console.log(filteredNumber)
+
+
 const productItems =[ {
     title :'book1',
-     price : 20
+     exist : true
 } , {
     title :'book2',
-    price :30
+    exist : false
 } , {
     title :'book3',
-    price : 40
+    exist : true
 } , {
     title :'book4',
-    price :50
+    exist : false
 }]
 
-const deleteProduct = function(products, productItem) {
-    const indexValue = products.findIndex(function(item, index){
-        return item.title.toLowerCase() === productItem.toLowerCase()
+const productNotExist = function(product){
+    return product.filter(function(item){
+        //return item.exist === false
+        return !item.exist  
     })
-    if (indexValue >-1) {
-        productItems.splice(indexValue, 1)
-    } else {
-        console.log('product not found')
-    }
-    }
-    
-    deleteProduct(productItems, 'book2')
-    console.log(productItems)
+}
+
+let result = productNotExist(productItems)
+
+console.log(result)

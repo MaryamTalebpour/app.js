@@ -16,7 +16,12 @@ const renderProducts = function(products, filters){
    const filterProducts = products.filter(function(item){
       return item.title.toLowerCase().includes(filters.searchItems.toLowerCase())
    })
-   console.log(filterProducts)
+   document.querySelector('#products').innerHTML = ''
+   filterProducts.forEach( function(item){
+      const productEl = document.createElement('p')
+      productEl.textContent = item.title
+      document.querySelector('#products').appendChild(productEl)
+   })
 }
 
 renderProducts(products, filters)
